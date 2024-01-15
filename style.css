@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #EA8D8D , #A890FE);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    margin-top: 3%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: center;
+    margin-top: 3%;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+#game{
+    width: 600px;
+    height: 175px;
+    border-bottom: 1px solid black;
+    margin-bottom: 4%;
+}
+
+#character{
+    width: 60px;
+    height: 20px;
+    background: url('dog.png') no-repeat;
+    position: relative;
+    top: 150px;
+}
+
+.animate{
+    animation: jump 500ms;
+}
+
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#obstacle{
+    width: 20px;
+    height: 20px;
+    background: url('tree.png') no-repeat;
+    position: relative;
+    top: 130px;
+    animation: block 2s  infinite linear;
+}
+
+
+@keyframes block{
+    0%{ left: 480px;}
+    100%{ left: -40px;}
+}
+.result-message{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px;
+    font-weight: 700;
+}
+.msg{
+    font-size: 24px;
+    text-transform: capitalize;
+    padding: 10px;
+    font-weight: 700; 
+}
